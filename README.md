@@ -2,9 +2,9 @@
     <h2>FINGERPRINTS<br>WEB TECHNOLOGY LOOKUP</h5>
 </div>
 
-#### showcase
+#### showcase:
 <div id="showcase", align="center">
-    <img src="https://github.com/morside/web-tech-fingerprints/src/assets/example.gif">
+    <img src="https://raw.githubusercontent.com/morside/web-tech-fingerprints/main/src/assets/example.gif">
 </div>
 
 #### technologies:
