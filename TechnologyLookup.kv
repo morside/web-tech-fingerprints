@@ -1,0 +1,278 @@
+<MainActivity>:
+	orientation: "vertical"
+
+	Label:
+		font_size: "40px"
+		bold: "true"
+		text: "FINGERPRINTS"
+		size_hint: (1, 1.6)
+	Label:
+		bold: "true"
+		text: "WEB TECHNOLOGY LOOKUP"
+		size_hint: (1, 1.5)
+	TextInput:
+		id: source_data
+		bold: "true"
+		multiline: False
+		cursor_color: (1, 1, 1, 1)
+		foreground_color: (1, 1, 1, 1)
+		hint_text: "website URL"
+		background_color: (0, 0, 0, 1)
+		pos_hint: {"center_x": 0.5, "center_y": 0.6}
+		size_hint: (0.5, 0.055)
+		padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines)]
+		canvas.before:
+			Color:
+				rgba: (1, 1, 1, 1)
+			Line:
+				width: 1
+				rectangle: self.x, self.y, self.width, self.height
+	Button:
+		bold: "true"
+		text: "LOOKUP"
+		background_color: (0, 0, 0, 1)
+		pos_hint: {"center_x": 0.5, "center_y": 0.5}
+		size_hint: (0.2, 0.05)
+		canvas.before:
+			Color:
+				rgba: (1, 1, 1, 1)
+			Line:
+				width: 1
+				rectangle: self.x, self.y, self.width, self.height
+		on_press: root.button_trigger()
+	Button:
+		bold: "true"
+		text: "USAGE"
+		background_color: (0, 0, 0, 1)
+		pos_hint: {"center_x": 0.5, "center_y": 0.42}
+		size_hint: (0.2, 0.05)
+		canvas.before:
+			Color:
+				rgba: (1, 1, 1, 1)
+			Line:
+				width: 1
+				rectangle: self.x, self.y, self.width, self.height
+		on_press: root.button_usage_trigger()
+	Button:
+		bold: "true"
+		text: "HISTORY"
+		background_color: (0, 0, 0, 1)
+		pos_hint: {"center_x": 0.5, "center_y": 0.34}
+		size_hint: (0.2, 0.05)
+		canvas.before:
+			Color:
+				rgba: (1, 1, 1, 1)
+			Line:
+				width: 1
+				rectangle: self.x, self.y, self.width, self.height
+		on_press: root.button_history_trigger()
+<ErrorActivity>
+	orientation: "vertical"
+
+	Label:
+		font_size: "40px"
+		bold: "true"
+		text: "FINGERPRINTS"
+		size_hint: (1, 1.6)
+	Label:
+		bold: "true"
+		text: "WEB TECHNOLOGY LOOKUP"
+		size_hint: (1, 1.5)
+	Label:
+		bold: "true"
+		text: "ERROR: INVALID LINK"
+		size_hint: (1, 1.2)
+	Button:
+		bold: "true"
+		text: "BACK"
+		background_color: (0, 0, 0, 1)
+		pos_hint: {"center_x": 0.5, "center_y": 0.5}
+		size_hint: (0.2, 0.05)
+		canvas.before:
+			Color:
+				rgba: (1, 1, 1, 1)
+			Line:
+				width: 1
+				rectangle: self.x, self.y, self.width, self.height
+		on_press: root.button_trigger()
+<UsageActivity>
+	orientation: "vertical"
+
+	Label:
+		font_size: "40px"
+		bold: "true"
+		text: "FINGERPRINTS"
+		size_hint: (1, 1.6)
+	Label:
+		bold: "true"
+		text: "WEB TECHNOLOGY LOOKUP"
+		size_hint: (1, 1.5)
+	Label:
+		text: root.usage_label
+		size_hint: (1, 1.14)
+	Button:
+		bold: "true"
+		text: "BACK"
+		background_color: (0, 0, 0, 1)
+		pos_hint: {"center_x": 0.5, "center_y": 0.42}
+		size_hint: (0.2, 0.05)
+		canvas.before:
+			Color:
+				rgba: (1, 1, 1, 1)
+			Line:
+				width: 1
+				rectangle: self.x, self.y, self.width, self.height
+		on_press: root.button_trigger()
+<LoadActivity>
+	orientation: "vertical"
+
+	Label:
+		font_size: "40px"
+		bold: "true"
+		text: "FINGERPRINTS"
+		size_hint: (1, 1.6)
+	Label:
+		bold: "true"
+		text: "WEB TECHNOLOGY LOOKUP"
+		size_hint: (1, 1.5)
+	Label:
+		bold: "true"
+		text: root.load_label
+		size_hint: (1, 1.2)
+	Label:
+		bold: "true"
+		text: "notice: loading may take some time."
+		size_hint: (1, 1.15)
+<OutputActivity>
+	orientation: "vertical"
+
+	Label:
+		bold: "true"
+		text: "FINGERPRINTS"
+		size_hint: (1, 1.9)
+	Label:
+		bold: "true"
+		text: "RESULTS:"
+		size_hint: (1, 1.85)
+	Label:
+		bold: "true"
+		text: root.lookup_target_label
+		size_hint: (1, 1.75)
+	Label:
+		bold: "true"
+		text: root.lookup_datetime_label
+		size_hint: (1, 1.70)
+	Label:
+		bold: "true"
+		text: root.lookup_result_label
+		size_hint: (1, 1.2)
+	Button:
+		bold: "true"
+		text: "BACK"
+		background_color: (0, 0, 0, 1)
+		pos_hint: {"center_x": 0.5, "center_y": 0.2}
+		size_hint: (0.2, 0.05)
+		canvas.before:
+			Color:
+				rgba: (1, 1, 1, 1)
+			Line:
+				width: 1
+				rectangle: self.x, self.y, self.width, self.height
+		on_press: root.button_trigger()
+<OutputFullActivity>
+	orientation: "vertical"
+
+	Label:
+		bold: "true"
+		text: "FINGERPRINTS"
+		size_hint: (1, 1.9)
+	Label:
+		bold: "true"
+		text: "RESULTS:"
+		size_hint: (1, 1.85)
+	Label:
+		bold: "true"
+		text: root.lookup_target_label
+		size_hint: (1, 1.75)
+	Label:
+		bold: "true"
+		text: root.lookup_datetime_label
+		size_hint: (1, 1.70)
+	Image:
+		id: lookup_image
+		source: "src/assets/icon.png"
+		size_hint: (1, 1.35)
+	Label:
+		bold: "true"
+		text: root.lookup_tech_cat_label
+		size_hint: (1, 1.2)
+	Label:
+		bold: "true"
+		text: root.lookup_tech_name_label
+		size_hint: (1, 1.15)
+	Label:
+		bold: "true"
+		text: root.lookup_tech_desc_label
+		size_hint: (1, 1.10)
+	Label:
+		bold: "true"
+		text: root.lookup_tech_web_label
+		size_hint: (1, 1.05)
+	Label:
+		bold: "true"
+		text: root.lookup_method_label
+		size_hint: (1, 1)
+	Label:
+		bold: "true"
+		text: root.lookup_fingerprint_label
+		size_hint: (1, 0.90)
+	Button:
+		bold: "true"
+		text: "BACK"
+		background_color: (0, 0, 0, 1)
+		pos_hint: {"center_x": 0.5, "center_y": 0.2}
+		size_hint: (0.2, 0.05)
+		canvas.before:
+			Color:
+				rgba: (1, 1, 1, 1)
+			Line:
+				width: 1
+				rectangle: self.x, self.y, self.width, self.height
+		on_press: root.button_trigger()
+<HistoryActivity>
+	orientation: "vertical"
+
+	Label:
+		bold: "true"
+		text: "FINGERPRINTS"
+		size_hint: (1, 1.9)
+	Label:
+		bold: "true"
+		text: "HISTORY:"
+		size_hint: (1, 1.85)
+	Button:
+		bold: "true"
+		text: "BACK"
+		background_color: (0, 0, 0, 1)
+		pos_hint: {"center_x": 0.5, "center_y": 0.2}
+		size_hint: (0.2, 0.05)
+		canvas.before:
+			Color:
+				rgba: (1, 1, 1, 1)
+			Line:
+				width: 1
+				rectangle: self.x, self.y, self.width, self.height
+		on_press: root.button_trigger()
+	Button:
+		bold: "true"
+		text: "CLEAR"
+		background_color: (0, 0, 0, 1)
+		pos_hint: {"center_x": 0.5, "center_y": 0.12}
+		size_hint: (0.2, 0.05)
+		canvas.before:
+			Color:
+				rgba: (1, 1, 1, 1)
+			Line:
+				width: 1
+				rectangle: self.x, self.y, self.width, self.height
+		on_press: root.button_clear_trigger()
